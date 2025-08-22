@@ -1,0 +1,45 @@
+lat:
+  instrument: GNSS receiver (PAMOS)
+  long_name: latitude
+  standard_name: latitude
+  units: degree_north
+lon:
+  instrument: GNSS receiver (PAMOS)
+  long_name: longitude
+  standard_name: longitude
+  units: degree_east
+precip_rate:
+  instrument: WXT536 (PAMOS)
+  long_name: precipitation rate (10 min)
+  standard_name: convective_precipitation_rate
+  units: m s-1
+pump_flag:
+  instrument: PLC (PAMOS)
+  long_name: 'pump flag (0: off, 1: on)'
+  standard_name: ''
+  units: '1'
+quality_aerosols:
+  instrument: aerosol instruments receiver (PAMOS)
+  long_name: 'quality flag aerosol parameters (0: ok, 1: error)'
+  standard_name: quality_flag
+  units: '1'
+quality_housekeeping:
+  instrument: PLC (PAMOS)
+  long_name: 'quality flag housekeeping (0: ok, 1: error)'
+  standard_name: quality_flag
+  units: '1'
+quality_meteorology:
+  instrument: WXT536 receiver (PAMOS)
+  long_name: 'quality flag meteorological parameters (0: ok, 1: error)'
+  standard_name: quality_flag
+  units: '1'
+quality_position:
+  instrument: GNSS receiver (PAMOS)
+  long_name: 'quality flag position (0: ok, 1: error)'
+  standard_name: quality_flag
+  units: '1'
+quality_tracegases:
+  instrument: trace gas sensors (PAMOS)
+  long_name: 'quality flag trace gas parameters (0: ok, 1: error)'
+  standard_name: quality_flag
+  units: '1'

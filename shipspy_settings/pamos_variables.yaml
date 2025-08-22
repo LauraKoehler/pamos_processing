@@ -1,0 +1,218 @@
+blue_bc1:
+  instrument: MA350 (PAMOS)
+  long_name: black carbon concentration (470 nm)
+  standard_name: mass_concentration_of_black_carbon_dry_aerosol_in_air
+  units: kg m-3
+  units_old: ng m-3
+  varname: bc_470nm
+ch4_conc:
+  instrument: CH4 FLOWEVO plus (PAMOS)
+  long_name: CH4 concentration
+  standard_name: ''
+  units: ppm
+  units_old: ppm
+  varname: ch4_conc
+co2_conc:
+  instrument: CO2 FLOWEVO plus (PAMOS)
+  long_name: CO2 concentration
+  standard_name: ''
+  units: ppm
+  units_old: ppm
+  varname: co2_conc
+co_conc:
+  instrument: CO FLOWEVO plus (PAMOS)
+  long_name: CO concentration
+  standard_name: ''
+  units: ppm
+  units_old: ppm
+  varname: co_conc
+diameter:
+  instrument: Partector2 (PAMOS)
+  long_name: aerosol diameter
+  standard_name: diameter_of_ambient_aerosol_particles
+  units: m
+  units_old: nm
+  varname: aerosol_diameter
+green_bc1:
+  instrument: MA350 (PAMOS)
+  long_name: black carbon concentration (528 nm)
+  standard_name: mass_concentration_of_black_carbon_dry_aerosol_in_air
+  units: kg m-3
+  units_old: ng m-3
+  varname: bc_528nm
+ir_bc1:
+  instrument: MA350 (PAMOS)
+  long_name: black carbon concentration (880 nm)
+  standard_name: mass_concentration_of_black_carbon_dry_aerosol_in_air
+  units: kg m-3
+  units_old: ng m-3
+  varname: bc_880nm
+lat:
+  instrument: GNSS receiver (PAMOS)
+  long_name: latitude value
+  standard_name: ''
+  units: degree
+  units_old: 0.01*degree
+  varname: lat
+lat_or:
+  instrument: GNSS receiver (PAMOS)
+  long_name: latitude orientation
+  standard_name: ''
+  units: '1'
+  units_old: '1'
+  varname: lat_or
+ldsa:
+  instrument: Partector2 (PAMOS)
+  long_name: lung-deposited surface area concentration
+  standard_name: ''
+  units: m-1
+  units_old: um2 cm-3
+  varname: ldsa
+lon:
+  instrument: GNSS receiver (PAMOS)
+  long_name: longitude value
+  standard_name: ''
+  units: degree
+  units_old: 0.01*degree
+  varname: lon
+lon_or:
+  instrument: GNSS receiver (PAMOS)
+  long_name: longitude orientation
+  standard_name: ''
+  units: '1'
+  units_old: '1'
+  varname: lon_or
+number:
+  instrument: Partector2 (PAMOS)
+  long_name: aerosol number concentration
+  standard_name: number_concentration_of_aerosol_particles_in_air
+  units: m-3
+  units_old: cm-3
+  varname: number_conc
+opcr2_pm1:
+  instrument: OPC-R2 (PAMOS)
+  long_name: mass concentration of PM1 ambient aerosol particles in air (sensor height)
+  standard_name: mass_concentration_of_pm1_ambient_aerosol_particles_in_air
+  units: kg m-3
+  units_old: ug m-3
+  varname: pm1
+opcr2_pm10:
+  instrument: OPC-R2 (PAMOS)
+  long_name: mass concentration of PM10 ambient aerosol particles in air (sensor height)
+  standard_name: mass_concentration_of_pm10_ambient_aerosol_particles_in_air
+  units: kg m-3
+  units_old: ug m-3
+  varname: pm10
+opcr2_pm2p5:
+  instrument: OPC-R2 (PAMOS)
+  long_name: mass concentration of PM2.5 ambient aerosol particles in air (sensor
+    height)
+  standard_name: mass_concentration_of_pm2p5_ambient_aerosol_particles_in_air
+  units: kg m-3
+  units_old: ug m-3
+  varname: pm2p5
+p_air:
+  instrument: WXT536 (PAMOS)
+  long_name: air pressure (sensor level)
+  standard_name: air_pressure
+  units: Pa
+  units_old: hPa
+  varname: p_air
+plc_tempcabinet:
+  instrument: PLC (PAMOS)
+  long_name: cabinet temperature
+  standard_name: ''
+  units: K
+  units_old: 0.1*degC
+  varname: t_cabinet
+precip_acc:
+  instrument: WXT536 (PAMOS)
+  long_name: accumulated precipitation
+  standard_name: precipitation_amount
+  units: m
+  units_old: mm
+  varname: precip_acc
+red_bc1:
+  instrument: MA350 (PAMOS)
+  long_name: black carbon concentration (625 nm)
+  standard_name: mass_concentration_of_black_carbon_dry_aerosol_in_air
+  units: kg m-3
+  units_old: ng m-3
+  varname: bc_625nm
+rh:
+  instrument: WXT536 (PAMOS)
+  long_name: relative humidity
+  standard_name: relative_humidity
+  units: '1'
+  units_old: percent
+  varname: rh
+so2_conc:
+  instrument: SO2 FLOWEVO plus (PAMOS)
+  long_name: SO2 concentration
+  standard_name: ''
+  units: ppm
+  units_old: ppm
+  varname: so2_conc
+speed:
+  instrument: GNSS receiver (PAMOS)
+  long_name: platform speed over ground
+  standard_name: platform_speed_wrt_ground
+  units: m s-1
+  units_old: m s-1
+  varname: platform_speed
+t_air:
+  instrument: WXT536 (PAMOS)
+  long_name: air temperature
+  standard_name: air_temperature
+  units: K
+  units_old: degC
+  varname: t_air
+uv_bc1:
+  instrument: MA350 (PAMOS)
+  long_name: black carbon concentration (375 nm)
+  standard_name: mass_concentration_of_black_carbon_dry_aerosol_in_air
+  units: kg m-3
+  units_old: ng m-3
+  varname: bc_375nm
+wdir_max:
+  instrument: WXT536 (PAMOS)
+  long_name: relative wind direction (max)
+  standard_name: wind_from_direction
+  units: degree
+  units_old: degree
+  varname: wdir_max
+wdir_mean:
+  instrument: WXT536 (PAMOS)
+  long_name: relative wind direction (mean)
+  standard_name: wind_from_direction
+  units: degree
+  units_old: degree
+  varname: wdir_mean
+wdir_min:
+  instrument: WXT536 (PAMOS)
+  long_name: relative wind direction (min)
+  standard_name: wind_from_direction
+  units: degree
+  units_old: degree
+  varname: wdir_min
+wspd_max:
+  instrument: WXT536 (PAMOS)
+  long_name: relative wind speed (max)
+  standard_name: wind_speed
+  units: m s-1
+  units_old: m s-1
+  varname: wspd_max
+wspd_mean:
+  instrument: WXT536 (PAMOS)
+  long_name: relative wind speed (mean)
+  standard_name: wind_speed
+  units: m s-1
+  units_old: m s-1
+  varname: wspd_mean
+wspd_min:
+  instrument: WXT536 (PAMOS)
+  long_name: relative wind speed (min)
+  standard_name: wind_speed
+  units: m s-1
+  units_old: m s-1
+  varname: wspd_min

@@ -1,0 +1,88 @@
+bc_375nm:
+  max: 5.0e-09
+  min: 0.0
+  var: 1.0e-18
+bc_470nm:
+  max: 5.0e-09
+  min: 0.0
+  var: 1.0e-18
+bc_528nm:
+  max: 5.0e-09
+  min: 0.0
+  var: 1.0e-18
+bc_625nm:
+  max: 5.0e-09
+  min: 0.0
+  var: 1.0e-18
+bc_880nm:
+  max: 5.0e-09
+  min: 0.0
+  var: 1.0e-18
+ch4_conc:
+  max: 50.0
+  min: 0.0
+  var: 10.0
+co2_conc:
+  max: 460
+  min: 380
+  var: 10.0
+co_conc:
+  max: 50.0
+  min: 0.0
+  var: 10.0
+lat:
+  max: -58
+  min: -67
+  var: 1.0
+lon:
+  max: -58
+  min: -67
+  var: 1.0
+no2_conc:
+  max: 50.0
+  min: 0.0
+  var: 10.0
+number_conc:
+  max: 10000000000
+  min: 0
+  var: 100000000000000000000
+p_air:
+  max: 106000
+  min: 95000
+  var: 10000
+pm1:
+  max: 5.0e-09
+  min: 0
+  var: 1.0e-16
+pm10:
+  max: 5.0e-07
+  min: 0
+  var: 1.0e-12
+pm2p5:
+  max: 5.0e-09
+  min: 0
+  var: 1.0e-16
+rh:
+  max: 1
+  min: 0
+  var: 0.05
+so2_conc:
+  max: 50.0
+  min: 0.0
+  var: 10.0
+t_air:
+  max: 323.15
+  min: 253.15
+  var: 5.0
+t_cabinet:
+  max: 303.15
+  min: 278.15
+  var: 5.0
+wdir_mean:
+  max: 360
+  min: 0
+  var: 67600
+wspd_mean:
+  max: 100
+  min: 0
+  var: 30
