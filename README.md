@@ -19,7 +19,7 @@ Afterwards, we added the positions from the ship GPS for reference and exported 
 ### MS Fridtjof Nansen 30 November, 2024 - 26 March, 2025 (Antarctic Peninsula)
 [![DOI](UPDATE)](UPDATE)
 
-The PAMOS with serial number 003 was deployed on the HX cruise vessel MS Fridtjof Nansen for the winter season 2024/2025 in the period 30 November - 26 March, 2025. During this time, the Nansen conducted eleven round trips from Ushuaia to the Antarctic Peninsula. Only data south of 60˚S is included. The raw data was processed with shipspy [[1]](https://github.com/shipspy-development/shipspy):
+The PAMOS with serial number 002 was deployed on the HX cruise vessel MS Fridtjof Nansen for the winter season 2024/2025 in the period 30 November - 26 March, 2025. During this time, the Nansen conducted eleven round trips from Ushuaia to the Antarctic Peninsula. Only data south of 60˚S is included. The raw data was processed with shipspy [[1]](https://github.com/shipspy-development/shipspy):
 ```
 shipspy pamos -i 2024_nansen_antarctica -o 2024_nansen_antarctica.nc -a shipspy_setting/pamos_variables.yaml -c shipspy_settings/laststring_header -f shipspy_settings/pamos_quality_flags_antarctica.yaml -e shipspy_settings/pamos_additional_attrs.yaml
 shipspy sections -i 2024_nansen_antarctica.nc -o 20241130_20250326_msfridtjofnansen_pamos.nc -s shipspy_settings/nansen_winter2425_antarctica_sections.txt -a shipspy_settings/pamos_nansen_winter2425_antarctica_antarctica_global_attrs.yaml
