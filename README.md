@@ -27,6 +27,8 @@ shipspy sections -i 2024_nansen_antarctica.nc -o 20241130_20250326_msfridtjofnan
 Afterwards, we added the positions from the ship GPS for reference and exported an additional csv file for Pangaea. The respective script for the final processing is [additional_scripts/pamos_antarctica_final_cleanup.py](additional_scripts/pamos_antarctica_final_cleanup.py).
 ## Minimal plotting examples
 
+### Greenland campaign overview
+
 Plotting example for the whole campaign. Gray shaded areas indicate periods when the pump was not running.
 
 ```python
@@ -91,6 +93,44 @@ axs[0].set_title("MS Fridtjof Nansen, Reykjavik - Greenland - Reykjavik")
 plt.tight_layout()
 ```
 ![image](plots/nansen_greenland_overview.png)
+
+### Single journey from Antarctic Peninsula data
+
+Select first trip to Antarctic Peninsula (section = 0). Here, the meteorological variables are shown including there quality flag. Again, grey shading indicates that the pump was switched off.
+
+```python
+import xarray as xr
+import numpy as np
+import matplotlib.pyplot as plt
+
+data = xr.open_dataset("20241130_20250326_msfridtjofnansen_pamos_shipposition.nc")
+data = data.groupby("section")[0]
+
+pump_switch = data["pump_flag"].dropna(dim="time").diff("time") != 0
+switch_times = data.time[1:].where(pump_switch, drop=True).values
+
+vars_to_plot = ['quality_meteorology', 't_air', 'p_air', 'rh', 'wspd_mean', 'wdir_mean', 'precip_rate']
+
+fig, axs = plt.subplots(7,1,figsize = (12,16), sharex = True)
+
+for ax in axs:
+    if data["pump_flag"][0] == False:
+        ax.set_facecolor("gainsboro")
+        for i in np.arange(len(switch_times))[::2]:
+            ax.axvspan(switch_times[i], switch_times[i+1], color = "white")
+    else:
+        for i in np.arange(len(switch_times))[::2]:
+            ax.axvspan(switch_times[i], switch_times[i+1], color = "gainsboro")
+
+for ax, var in zip(fig.get_axes(), vars_to_plot):
+    data[var].plot(ax = ax)
+    ax.set_xlabel("")
+
+axs[-1].set_xlabel("time")
+
+plt.tight_layout()
+```
+![image](plots/nansen_peninsula_meteorology_overview.png)
 
 ## References
 
