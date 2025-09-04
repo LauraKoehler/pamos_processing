@@ -27,6 +27,71 @@ shipspy sections -i 2024_nansen_antarctica.nc -o 20241130_20250326_msfridtjofnan
 Afterwards, we added the positions from the ship GPS for reference and exported an additional csv file for Pangaea. The respective script for the final processing is [additional_scripts/pamos_antarctica_final_cleanup.py](additional_scripts/pamos_antarctica_final_cleanup.py).
 ## Minimal plotting examples
 
+Plotting example for the whole campaign. Gray shaded areas indicate periods when the pump was not running.
+
+```python
+import xarray as xr
+import numpy as np
+import matplotlib.pyplot as plt
+
+data = xr.open_dataset("20240724_20240807_msfridtjofnansen_pamos_shipposition.nc")
+
+pump_switch = data["pump_flag"].dropna(dim="time").diff("time") != 0
+switch_times = data.time[1:].where(pump_switch, drop=True).values
+
+fig, axs = plt.subplots(4,1,figsize = (10,9), sharex = True)
+
+ax1 = axs[0].twinx()
+ax2 = axs[1].twinx()
+ax3 = axs[3].twinx()
+
+for ax in axs:
+    if data["pump_flag"][0] == False:
+        ax.set_facecolor("gainsboro")
+        for i in np.arange(len(switch_times))[::2]:
+            ax.axvspan(switch_times[i], switch_times[i+1], color = "white")
+    else:
+        for i in np.arange(len(switch_times))[::2]:
+            ax.axvspan(switch_times[i], switch_times[i+1], color = "gainsboro")
+        
+
+plotting_dict = {"t_air": {"c": "tab:purple", "a": axs[0], "alpha" : 1},
+                "p_air": {"c": "tab:green", "a": ax1, "alpha" : 1},
+                "number_conc": {"c": "tab:brown", "a": axs[1], "alpha" : 1},
+                "pm10": {"c": "tab:orange", "a": ax2, "alpha" : 1},
+                "co2_conc": {"c": "tab:cyan", "a": axs[3], "alpha" : 1},
+                "co_conc": {"c": "tab:olive", "a": ax3, "alpha" : 1},
+                "bc_375nm": {"c": "darkviolet", "a": axs[2], "alpha" : 0.2},
+                "bc_470nm": {"c": "blue", "a": axs[2], "alpha" : 0.2},
+                "bc_528nm": {"c": "green", "a": axs[2], "alpha" : 0.2},
+                "bc_625nm": {"c": "red", "a": axs[2], "alpha" : 0.2},
+                "bc_880nm": {"c": "orange", "a": axs[2], "alpha" : 0.2}}
+
+bc_mean = (data["bc_375nm"] + data["bc_470nm"] + data["bc_528nm"] + data["bc_625nm"] + data["bc_880nm"])/5
+
+for v in plotting_dict.keys():
+    col = plotting_dict[v]["c"]
+    ax = plotting_dict[v]["a"]
+    alpha = plotting_dict[v]["alpha"]
+    data[v].plot(ax = ax, c = col, lw = 1, alpha = alpha, label = v)
+    if not ax == axs[2]:
+        ax.tick_params(axis = "y", labelcolor = col)
+        ax.set_ylabel(ax.get_ylabel(), color=col)
+    ax.set_xlabel("")
+
+bc_mean.plot(ax = axs[2], c = "tab:red", lw = 1, label = "average")
+axs[2].set_ylabel("black carbon conc. [kg m-3]")
+axs[2].set_xlabel("")
+axs[2].legend()
+
+axs[3].set_xlabel("time")
+
+axs[0].set_title("MS Fridtjof Nansen, Reykjavik - Greenland - Reykjavik")
+
+plt.tight_layout()
+```
+![image](plots/nansen_greenland_overview.png)
+
 ## References
 
 [1] Köhler, L. (2025). shipspy (Version 1.1.0) [Computer software]. https://github.com/shipspy-development/shipspy
