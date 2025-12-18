@@ -7,7 +7,7 @@ To process PAMOS raw data, we use the python package shipspy [[1]](https://githu
 ## PAMOS deployments
 
 ### MS Fridtjof Nansen 24 July - 7 August, 2024 (Island/Greenland)
-[![DOI](UPDATE)](UPDATE)
+[![DOI](https://img.shields.io/badge/DOI-10.1594%2FPANGAEA.985001-blue)](https://doi.org/10.1594/PANGAEA.985001)
 
 The PAMOS with serial number 001 was deployed on the HX cruise vessel MS Fridtjof Nansen for one journey from Reykjavik to Greenland and back in the period 24 July - 7 August, 2024. The raw data was processed with shipspy [[1]](https://github.com/shipspy-development/shipspy):
 ```
@@ -17,7 +17,7 @@ shipspy sections -i 2024_nansen_greenland.nc -o 20240724_20240807_msfridtjofnans
 Afterwards, we added the positions from the ship GPS for reference and exported an additional csv file for Pangaea. The respective script for the final processing is [additional_scripts/pamos_greenland_final_cleanup.py](additional_scripts/pamos_greenland_final_cleanup.py).
 
 ### MS Fridtjof Nansen 30 November, 2024 - 26 March, 2025 (Antarctic Peninsula)
-[![DOI](UPDATE)](UPDATE)
+[![DOI](https://img.shields.io/badge/DOI-10.1594%2FPANGAEA.985067-blue)](https://doi.org/10.1594/PANGAEA.985067)
 
 The PAMOS with serial number 002 was deployed on the HX cruise vessel MS Fridtjof Nansen for the winter season 2024/2025 in the period 30 November - 26 March, 2025. During this time, the Nansen conducted eleven round trips from Ushuaia to the Antarctic Peninsula. Only data south of 60˚S is included. The raw data was processed with shipspy [[1]](https://github.com/shipspy-development/shipspy):
 ```
