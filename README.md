@@ -2,7 +2,7 @@
 
 PAMOS (Portable Atmospheric Measurement box On Sea) is an air monitoring device especially designed for commercial vessels within the project SOOP (Shaping an Ocean Of Possibilities for science-industry collaboration). The instrument runs fully autonomously without frequent onboard maintenance to use commercial vessels for collecting atmospheric data in remote regions. This will help to close the data gaps over the oceans. The PAMOS samples meteorological data (temperature, pressure, relative humidity, wind speed and direction, precipitation), position, aerosol parameters (particle number concentration, particulate matter, black carbon), and trace gases.
 
-To process PAMOS raw data, we use the python package shipspy [[1]](https://github.com/shipspy-development/shipspy). It provides the commands 'pamos' and 'sections' which we use in the following. Here, we provide the settings used for shipspy. Furthermore, we provide additional scripts used for the final version of the data sets published on Pangaea [2].
+To process PAMOS raw data, we use the python package shipspy [[1]](https://github.com/shipspy-development/shipspy). It provides the commands 'pamos' and 'sections' which we use in the following. Here, we provide the settings used for shipspy. Furthermore, we provide additional scripts used for the final version of the data sets published on Pangaea [2,3].
 
 ## PAMOS deployments
 
@@ -136,4 +136,6 @@ plt.tight_layout()
 
 [1] Köhler, L. (2025). shipspy (Version 1.1.0) [Computer software]. https://github.com/shipspy-development/shipspy
 
-[2] tba
+[2] Köhler, Laura; Herber, Andreas (2025): Automated Measurements of Atmospheric Aerosols and Black Carbon on Commercial Cruise Voyages with the Portable Atmospheric Measurement box On Sea (PAMOS): MS Fridtjof Nansen from July 2024 to August 2024 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.985001
+
+[3] Köhler, Laura; Herber, Andreas (2025): Automated Measurements of Atmospheric Aerosols and Black Carbon on Commercial Cruise Voyages with the Portable Atmospheric Measurement box On Sea (PAMOS): MS Fridtjof Nansen from November 2024 to March 2025 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.985067
